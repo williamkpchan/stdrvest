@@ -1,0 +1,21 @@
+<base target="_blank"><html><head><title>faphouse videos</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="https://williamkpchan.github.io/maincss.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.js"></script>
+<script src="https://williamkpchan.github.io/lazyload.min.js"></script>
+<script src='https://williamkpchan.github.io/mainscript.js'></script>
+<script src="https://williamkpchan.github.io/commonfunctions.js"></script>
+<script>
+  var showTopicNumber = true;
+  var topicEnd = "<br>";
+  var bookid = "faphouse videos"
+  var markerName = "img"
+</script>
+<style>
+body{width:100%;margin-left: 0%; font-size:16px;}
+h1, h2 {color: gold;}
+strong {color: orange;}
+div {display: inline-block;width:33%;}
+img {display: inline-block; margin-top: 2%;margin-bottom: 1%; border-radius:3px; max-width: 100%;}
+</style></head><body onkeypress="chkKey()"><center>
