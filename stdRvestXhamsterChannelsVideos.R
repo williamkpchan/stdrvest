@@ -88,13 +88,20 @@ for(i in 1:length(addr)){
 
  itemList <- html_nodes(pagesource, className)
  links = html_attr(itemList, "href")
+ previewvideo = html_attr(itemList, "data-previewvideo")
 
  images = html_nodes(itemList, "noscript img")
  imgSrc = html_attr(images, "src")
  linksTxt = html_attr(images, "alt")
 
- result = paste0('<div><a href="', links, '"><img class="lazy" data-src="', imgSrc, '"><br>', linksTxt, '</a></div>')
- #rmid = grep('Friends only', result)
+ sprite <- html_nodes(pagesource, "div.thumb-image-container__sprite")
+ sprite = html_attr(sprite, "data-sprite")
+ spriteTxt = paste0('<br><img src="', sprite, '"><br>')
+
+ videoTxt = paste0('<br><video controls loop autoplay><source src="', previewvideo, '"></video>')
+
+ result = paste0('<div><a href="', links, '"><img src="', imgSrc, '"><br>', linksTxt, '</a>', videoTxt, spriteTxt, '</div>')
+ #rmid = grep('Friends only', result)s
  #result = result[-rmid]
 
 wholePage = c(wholePage, result)
