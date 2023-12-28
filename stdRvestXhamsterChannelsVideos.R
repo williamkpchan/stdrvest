@@ -120,9 +120,13 @@ wholePage = c(wholePage, result)
 }
 
 #writeClipboard(wholePage)
-templateHead = readLines("templateHead.txt")
-templateTail = readLines("templateTail.txt")
-templateHead = gsub("mom50", paste0(titleName, ": ",length(wholePage)), templateHead)
+templateHead = readLines("templateHeadArray.txt")
+templateTail = readLines("templateTailArray.txt")
+templateHead = gsub("penny-barber", paste0(titleName, ": ",length(wholePage)), templateHead)
+templateTail = gsub("penny-barber", paste0(titleName, ": ",length(wholePage)), templateTail)
+wholePage = gsub("'", ".", wholePage)
+wholePage = gsub("<div>", "'", wholePage)
+wholePage = gsub("</div>", "',", wholePage)
 
 sink(theFilename)
 cat(templateHead, sep="\n")
