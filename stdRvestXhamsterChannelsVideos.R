@@ -16,8 +16,10 @@ library(crayon)
 starHeader="https://xhamster.com/channels/"
 className = ".page-list-container li"
 
-typeName = readline(prompt="select Channel, creators, users, Star or search (1/2/3/4/5): ")
+typeName = readline(prompt="select Channel, creators, users, Star, search, tags (1/2/3/4/5/6): ")
 starName = readline(prompt="enter Keyword: ")
+mergeMode = readline(prompt="merge mode? (0/1) ")
+
 pageTail=""
 
 if(typeName == "1"){
@@ -37,9 +39,17 @@ if(typeName == "1"){
 }else if(typeName == "5"){
   starHeader=paste0("https://xhamster.com/search/", starName, "?quality=720p&sort=best&page=")
   pageHeader = starHeader
+}else if(typeName == "6"){
+  starHeader="https://xhamster.com/tags/"
+  pageHeader = paste0(starHeader, starName)
 }
 
-theFilename = paste0("xhamster ", starName, ".html")
+if(mergeMode == "0"){
+  theFilename = paste0("xhamster ", starName, ".html")
+}else{
+  theFilename = paste0("mergeLists.js")
+}
+
 titleName = starName
 
 wholePage = character()
@@ -94,6 +104,10 @@ for(i in 1:length(addr)){
  imgSrc = html_attr(images, "src")
  linksTxt = html_attr(images, "alt")
 
+ if(mergeMode != "0"){
+   linksTxt = paste0(starName,", " ,linksTxt)
+ }
+
  sprite <- html_nodes(pagesource, "div.thumb-image-container__sprite")
  sprite = html_attr(sprite, "data-sprite")
  spriteTxt = paste0('<br><img src="', sprite, '"><br>')
@@ -128,11 +142,20 @@ wholePage = gsub("'", ".", wholePage)
 wholePage = gsub("<div>", "'", wholePage)
 wholePage = gsub("</div>", "',", wholePage)
 
-sink(theFilename)
-cat(templateHead, sep="\n")
-cat(wholePage, sep="\n")
-cat(templateTail, sep="\n")
-sink()
+if(mergeMode == "0"){
+  sink(theFilename)
+  cat(templateHead, sep="\n")
+  cat(wholePage, sep="\n")
+  cat(templateTail, sep="\n")
+  sink()
+}else{
+  mergeFile = readLines(theFilename)
+  mergeFile = mergeFile[-length(mergeFile)]
+  mergeFile = c(mergeFile, wholePage, "];")
+  sink(theFilename)
+  cat(mergeFile, sep="\n")
+  sink()
+}
 
 ProcessEndTime = Sys.time()
 cat(format(Sys.time(), "%H:%M:%OS"),"\n")
@@ -141,4 +164,8 @@ cat("Task completed! loop time: ", dhms(LoopTime),"\n\n\n")
 cat(theFilename, "created!", "Total links: ", length(wholePage), "\n")
 theFilename = paste0('"',theFilename,'"')
 
-shell(theFilename)
+if(mergeMode == "0"){
+  shell(theFilename)
+}else{
+  shell("mergeLists.html")
+}
