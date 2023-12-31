@@ -28,7 +28,6 @@ video {width: 60%;}
 
 <body onkeypress="chkKey()">
 <br>
-<span id="dateAndTime" onclick="showDateAndTime()"><script>showDateAndTime();</script></span>
 <div class="tip-number">mergeLists</div>
 <pre class="js-tip"></pre>
 <button class="tip-button" onclick="forward()">Tips Left: <span class="tip-limit-count"></span></button>
@@ -39,9 +38,10 @@ video {width: 60%;}
 // List of JavaScript tips
 
 bookid = "mergeLists"
-initSelectRange = 6000
+initSelectRange = 60000
 showSrcSwitch = true
 noShuffle = true;
+focusSwitch = false;
 showHelpTxt = `+ addToIgnoreLst\n- removeFmIgnoreLst\n2 setRange\nA toggle_automode\nb backClick\nc callCalculator\ne scrollTo Bottom\nf forward\nH showHelp\nI setInterval\nr randomNum\nR removeNumFmIgnoreLst\ns setRange\nS toggle_showSrcSwitch\nT alertTotal\nt scrollTo Top\nv viewIgnoreLst\nx showAnswer\nz showTenYear`
 
 </script>
