@@ -31,8 +31,8 @@ for(k in batchFIle){
     starName = gsub("^.*/", "", k)
     cat(red("\ntagName: ", tagName, " starName: ", starName, "\n"))
 
-    if(tagName == "channel"){
-      urlHeader="https://xhamster.com/channels/"
+    if(tagName == "channels"){
+      urlHeader = "https://xhamster.com/channels/"
       pageHeader = paste0(urlHeader, starName)
       className = ".page-button-link"
     }else if(tagName == "creators"){
@@ -139,7 +139,12 @@ for(k in batchFIle){
       mergeFile = mergeFile[-length(mergeFile)]
       mergeFile = c(mergeFile, wholePage, "];")
       sink(theFilename)
-      cat(mergeFile, sep="\n")
+        cat(mergeFile, sep="\n")
       sink()
 
+      batchFIleHistory = c(batchFIleHistory, batchFIle)
+      sink("xhamsterBatchProcessHistory.txt")
+        cat(batchFIleHistory, sep="\n")
+      sink()
+      cat(yellow("\nxhamsterBatchProcessHistory.txt updated!\n"))
       shell("xhamsterBatch.html")

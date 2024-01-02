@@ -16,33 +16,35 @@ library(crayon)
 starHeader="https://xhamster.com/channels/"
 className = ".page-list-container li"
 
-typeName = readline(prompt="select Channel, creators, users, Star, search, tags (1/2/3/4/5/6): ")
+typeName = readline(prompt="select Channel, creators, users, Star, search, tags, categories (1/2/3/4/5/6/7): ")
 starName = readline(prompt="enter Keyword: ")
 mergeMode = readline(prompt="merge mode? (0/1) ")
 
 pageTail=""
-
-if(typeName == "1"){
-  starHeader="https://xhamster.com/channels/"
-  pageHeader = paste0(starHeader, starName)
-  className = ".page-button-link"
-
-}else if(typeName == "2"){
-  starHeader="https://xhamster.com/creators/"
-  pageHeader = paste0(starHeader, starName)
-}else if(typeName == "3"){
-  starHeader=paste0("https://xhamster.com/users/", starName, "/videos")
-  pageHeader = starHeader
-}else if(typeName == "4"){
-  starHeader="https://xhamster.com/pornstars/"
-  pageHeader = paste0(starHeader, starName)
-}else if(typeName == "5"){
-  starHeader=paste0("https://xhamster.com/search/", starName, "?quality=720p&sort=best&page=")
-  pageHeader = starHeader
-}else if(typeName == "6"){
-  starHeader="https://xhamster.com/tags/"
-  pageHeader = paste0(starHeader, starName)
-}
+    if(typeName == "1"){
+      starHeader="https://xhamster.com/channels/"
+      pageHeader = paste0(starHeader, starName)
+      className = ".page-button-link"
+    
+    }else if(typeName == "2"){
+      starHeader="https://xhamster.com/creators/"
+      pageHeader = paste0(starHeader, starName)
+    }else if(typeName == "3"){
+      starHeader=paste0("https://xhamster.com/users/", starName, "/videos")
+      pageHeader = starHeader
+    }else if(typeName == "4"){
+      starHeader="https://xhamster.com/pornstars/"
+      pageHeader = paste0(starHeader, starName)
+    }else if(typeName == "5"){
+      starHeader=paste0("https://xhamster.com/search/", starName, "?quality=720p&sort=best&page=")
+      pageHeader = starHeader
+    }else if(typeName == "6"){
+      starHeader="https://xhamster.com/tags/"
+      pageHeader = paste0(starHeader, starName)
+    }else if(typeName == "7"){
+      urlHeader="https://xhamster.com/categories/"
+      pageHeader = paste0(urlHeader, starName)
+    }
 
 if(mergeMode == "0"){
   theFilename = paste0("xhamster ", starName, ".html")
