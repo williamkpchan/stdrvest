@@ -58,7 +58,7 @@ wholePage = character()
 
 # remember to remove &#9;
 
-url = pageHeader
+url = paste0(pageHeader, "/hd/")
 cat(url, "\n")
 pagesource <- read_html(url)
 lastPageclassName = ".xh-paginator-button, .page-button-link"
@@ -90,7 +90,7 @@ dhms <- function(t){
 for(i in 1:length(addr)){
  cat(i, "of", length(addr), " ")
 
- url = paste0(pageHeader,'/',addr[i],pageTail)
+ url = paste0(pageHeader, "/hd/",addr[i],pageTail)
  if(typeName == "5"){
    url = paste0(pageHeader, addr[i])
  }
