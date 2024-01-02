@@ -15,6 +15,7 @@ library(crayon)
 
 cat(red("\n\nBATCH Process xhamsterTxt.txt\n"))
 batchFIle = readLines("xhamsterBatchProcess.txt")
+batchFIleHistory = readLines("xhamsterBatchProcessHistory.txt")
 
 pageHeader ="https://xhamster.com/channels/"
 className = ".page-list-container li"
@@ -23,10 +24,13 @@ theFilename = paste0("xhamsterBatch.js")
 wholePage = character()
 
 for(k in batchFIle){
+  historyIdx = grep(k, batchFIleHistory)
+  if(length(historyIdx) ==0){
     tagName = gsub("^.*?com/", "", k)
     tagName = gsub("/.*", "", tagName)
     starName = gsub("^.*/", "", k)
-    cat("\ntagName: ", tagName, " starName: ", starName, "\n")
+    cat(red("\ntagName: ", tagName, " starName: ", starName, "\n"))
+
     if(tagName == "channel"){
       urlHeader="https://xhamster.com/channels/"
       pageHeader = paste0(urlHeader, starName)
@@ -112,6 +116,9 @@ for(k in batchFIle){
 
      wholePage = c(wholePage, result)
     }
+  }else{
+    cat(red("\nListed in History!: ", k, "\n"))
+  }
 }
     templateHead = readLines("templateHeadArray.txt")
     templateTail = readLines("templateTailArray.txt")
