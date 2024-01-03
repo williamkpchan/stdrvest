@@ -59,6 +59,12 @@ wholePage = character()
 # remember to remove &#9;
 
 url = paste0(pageHeader, "/hd/")
+
+batchFIleHistory = readLines("xhamsterBatchProcessHistory.txt")
+historyIdx = grep(url, batchFIleHistory)
+if(length(historyIdx) !=0){
+    stop(red("\nListed in History!: ", k, "\n"))
+}
 cat(url, "\n")
 pagesource <- read_html(url)
 lastPageclassName = ".xh-paginator-button, .page-button-link"
@@ -171,3 +177,6 @@ if(mergeMode == "0"){
 }else{
   shell("mergeLists.html")
 }
+
+      write(url, file="xhamsterBatchProcessHistory.txt", append=TRUE)
+      cat(yellow("\nxhamsterBatchProcessHistory.txt updated!\n"))

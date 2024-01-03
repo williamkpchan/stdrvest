@@ -28,7 +28,14 @@ wholePage = character()
 # remember to remove &#9;
 
 url = pageHeader
+
  cat("url:",url, "\n")
+  batchFIleHistory = readLines("xhamsterBatchProcessHistory.txt")
+  historyIdx = grep(k, batchFIleHistory)
+  if(length(historyIdx) !=0){
+    stop(red("\nListed in History!: ", k, "\n"))
+  }
+
  pagesource <- read_html(url)
  className = "a.video-thumb__image-container"
 
@@ -75,3 +82,6 @@ url = pageHeader
 cat(theFilename, "created!", "Total links: ", length(wholePage), "\n")
 theFilename = paste0('"',theFilename,'"')
 shell("mergeLists.html")
+
+      write(url, file="xhamsterBatchProcessHistory.txt", append=TRUE)
+      cat(yellow("\nxhamsterBatchProcessHistory.txt updated!\n"))
