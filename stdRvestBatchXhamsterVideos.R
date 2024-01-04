@@ -59,7 +59,8 @@ for(k in batchFIle){
 
     url = pageHeader
     cat(url, "\n")
-    pagesource <- read_html(url)
+
+    pagesource <- read_html(paste0(url, "/hd/"))
     lastPageclassName = ".xh-paginator-button, .page-button-link"
     lastPageNum <- html_nodes(pagesource, lastPageclassName)
     lastPageNum = lastPageNum[length(lastPageNum)]
@@ -89,7 +90,7 @@ for(k in batchFIle){
     for(i in 1:length(addr)){
      cat(i, "of", length(addr), " ")
 
-     url = paste0(pageHeader,'/',addr[i],pageTail)
+     url = paste0(pageHeader, "/hd/",addr[i],pageTail)
      if(tagName == "5"){
        url = paste0(pageHeader, addr[i])
      }
@@ -148,3 +149,12 @@ for(k in batchFIle){
       sink()
       cat(yellow("\nxhamsterBatchProcessHistory.txt updated!\n"))
       shell("xhamsterBatch.html")
+
+      cleanUP = readline(prompt="clean xhamsterBatchProcess.txt? (0/1): ")
+
+      if(cleanUP == "1"){
+        sink("xhamsterBatchProcess.txt")
+          cat("")
+        sink()
+        cat(yellow("\nxhamsterBatchProcess.txt washed!\n"))
+      }
