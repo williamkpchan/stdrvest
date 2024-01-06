@@ -91,7 +91,7 @@ for(k in batchFIle){
      cat(i, "of", length(addr), " ")
 
      url = paste0(pageHeader, "/hd/",addr[i],pageTail)
-     if(tagName == "5"){
+     if(tagName == "users")
        url = paste0(pageHeader, addr[i])
      }
      cat("url:",url, "\n")
