@@ -47,7 +47,7 @@ pageTail=""
     }
 
 if(mergeMode == "0"){
-  theFilename = paste0("xhamster ", starName, ".html")
+  theFilename = paste0("xhamster ", starName, ".htm")
 }else{
   theFilename = paste0("mergeLists.js")
 }
