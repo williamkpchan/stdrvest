@@ -52,6 +52,10 @@ for(k in batchFIle){
       urlHeader = "https://www.pornhub.com/model/"
       pageHeader = paste0(urlHeader, starName, "/videos")
       className = ".phimage a"
+    }else if(tagName == "channels"){
+      urlHeader = "https://www.pornhub.com/channels/"
+      pageHeader = paste0(urlHeader, starName, "/videos")
+      className = ".phimage a"
     }else if(tagName == "pornstar"){
       urlHeader = "https://www.pornhub.com/pornstar/"
 

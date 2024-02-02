@@ -18,13 +18,16 @@ library(rvest)
 library(crayon)
  ligSilver <- make_style("#889988")
 
+# collections of sites, change it
 pageHeader="https://pornpics.photo/xxx/"
 #pageTail="/"
 pageTail=""
 className = "li a" # pornpic
-titleName = readline(prompt="enter titleName: ")
-totalPages= readline(prompt="enter total pages: ")
 
+titleName = readline(prompt="enter titleName: ")
+totalPages= readline(prompt="enter total pages: ") # total pages on top of pages
+#titleName ="labia" 34pages
+#Anilos 197
 theFilename = paste0("pornpics.photo.", titleName, "Links.html")
 wholePage = character()
 

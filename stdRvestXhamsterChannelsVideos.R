@@ -16,9 +16,13 @@ library(crayon)
 starHeader="https://xhamster.com/channels/"
 className = ".page-list-container li"
 
-typeName = readline(prompt="select Channel, creators, users, Star, search, tags, categories (1/2/3/4/5/6/7): ")
+typeArr = c("Channel", "creators", "users", "Star", "search", "tags", "categories")
+typeArrStr = paste(typeArr, collapse = ', ')
+
+typeName = readline(prompt=paste0("select ", typeArrStr, "(1/2/3/4/5/6/7): "))
 starName = readline(prompt="enter Keyword: ")
-mergeMode = readline(prompt="merge mode? (0/1) ")
+mergeMode = readline(prompt="merge mode? n/y(0/1) ")
+cat("selected: ",typeArr[as.numeric(mergeMode)], "\n")
 
 pageTail=""
     if(typeName == "1"){

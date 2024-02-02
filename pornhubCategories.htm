@@ -1,0 +1,156 @@
+<base target="_blank"><html><head><title>pornhubCategories</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="https://williamkpchan.github.io/maincss.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.js"></script>
+<script src="https://williamkpchanhp.github.io/LibDocs/literature/proverbs.js"></script>
+<script src='../mainscript.js'></script>
+
+</head>
+<style>
+body { background-color: black; font-family: 'Patrick Hand', sans-serif; font-size: 24px; color: gray; justify-content: center; align-content: center; width: 80%; margin-left: 10%;}
+
+.tip { width: 100%;}
+.code { background-color: #000500; border-radius: 8px; border: 1px solid DarkSlateGray; padding: 5px; }
+.tip-number { margin: auto; color: #20A020; text-transform: uppercase; letter-spacing: 0.1rem; font-weight: bolder; font-size: 26px;}
+.js-tip, .cssTip, .cssExplain { margin: auto; padding: 2px 2px; font-size: 24px; line-height: 1.5;}
+.tip-button { background-color: #003020; outline: none; padding: 10px 10px; display: inline-block; margin: auto; font-size: 1rem; margin-top: 2.5rem; cursor: pointer; font-weight: bolder; border: none; border-radius: 8px; color: #10C030;}
+.disabled { background-color: #D8D8D8 !important; color: #888; cursor: not-allowed !important;}
+a { text-decoration: none; color: #487878;}
+a:visited { color: #784838;}
+A:hover {	color: yellow;}
+A:focus {	color: red;}
+code { color: #488838;; background-color: #001010; font-size: 18px;}
+pre { color: gray; background-color: #000500; font-size: 24px; width:80%; white-space: pre-wrap; background-image:inherit;}
+pre img {width: 100%;}
+video {width: 60%;}
+</style>
+
+<body onkeypress="chkKey()">
+<br>
+<span id="dateAndTime" onclick="showDateAndTime()"><script>showDateAndTime();</script></span>
+<div class="tip-number" onclick="forward()" ondblclick="randomNum()">pornhubCategories</div>
+<pre class="js-tip"></pre>
+<button class="tip-button" onclick="forward()">Tips Left: <span class="tip-limit-count"></span></button>
+<br>
+
+<br>
+<script>
+// List of JavaScript tips
+var tipsList = [
+
+'<a href="https://www.pornhub.com/video?c=28">Mature<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=q-1556TbeqM48zjadOf)(mh=Vu7U3lgFM_uJcqh_)roku_28.jpg"></a>',
+'<a href="https://www.pornhub.com/categories/teen">Teen (18+)<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=q-1656TbeqM48zjadOf)(mh=fbGu2Lb3uKOnjGHU)roku_37.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=29">MILF<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=qX2556TbeqM48zjadOf)(mh=D5nAUyTV806-Qtyj)roku_29.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=17">Ebony<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=qKZ556TbeqM48zjadOf)(mh=Gw00SJe4_Ll07KTI)roku_17.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=35">Anal<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=q6S256TbeqM48zjadOf)(mh=KBQdnHtitPs7Tl8Q)roku_35.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=181">Old/Young (18+)<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=q73556TbeqM48zjadOf)(mh=YPKt7H0m84T3RVuK)roku_181.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=27">Lesbian<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=q41656TbeqM48zjadOf)(mh=l_nKi0NIJrFQt92Q)roku_27.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=65">Threesome<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=qS2656TbeqM48zjadOf)(mh=zinlA_-UfeTW6Hg6)roku_65.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=111">Japanese<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=q1Y556TbeqM48zjadOf)(mh=toivlv5CVaOzReoC)roku_111.jpg"></a>',
+'<a href="https://www.pornhub.com/categories/hentai">Hentai<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=q5V556TbeqM48zjadOf)(mh=T50h9WANdRlW_vU0)roku_36.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=105">60FPS<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=q2P256TbeqM48zjadOf)(mh=J6dfU9w3npT490vf)roku_105.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=3">Amateur<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=qYR256TbeqM48zjadOf)(mh=IxMMDoS8KN1bzGlK)roku_3.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=98">Arab<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=q0T256TbeqM48zjadOf)(mh=cXWsqMP2fK_BO3oY)roku_98.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=1">Asian<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=qKV256TbeqM48zjadOf)(mh=2Ays7m7fz1V9Em5R)roku_1.jpg"></a>',
+'<a href="https://www.pornhub.com/categories/babe">Babe<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=qIW256TbeqM48zjadOf)(mh=-dPRAYiX-jHdBrQ-)roku_5.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=89">Babysitter (18+)<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=qLX256TbeqM48zjadOf)(mh=5dxDBj3-8FlbsC77)roku_89.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=6">BBW<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=q6Y256TbeqM48zjadOf)(mh=xLrrU6hijRVQC79r)roku_6.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=141">Behind The Scenes<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=q4Z256TbeqM48zjadOf)(mh=li0m0lFjbUEKeoAE)roku_141.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=4">Big Ass<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=q_G356TbeqM48zjadOf)(mh=T1LFRYsjdkrUbF0E)roku_4.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=7">Big Dick<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=qYQ356TbeqM48zjadOf)(mh=gKopEyFplx6-__6m)roku_7.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=8">Big Tits<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=qHP356TbeqM48zjadOf)(mh=HEK-cidRo6HOXvG0)roku_8.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=76">Bisexual Male<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=qZR356TbeqM48zjadOf)(mh=HFRHLy0_wjFv1W-X)roku_76.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=9">Blonde<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=q9S356TbeqM48zjadOf)(mh=8IVLpHGerARxXw1I)roku_9.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=13">Blowjob<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=q22356TbeqM48zjadOf)(mh=EYGxj1JFnMwUE6BC)roku_13.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=10">Bondage<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=qU3356TbeqM48zjadOf)(mh=WcAVyEx33K_dTlUF)roku_10.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=102">Brazilian<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=qR4356TbeqM48zjadOf)(mh=JiiDnU_SbPtqEg7j)roku_102.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=96">British<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=q86356TbeqM48zjadOf)(mh=MYP2hxDnkNN08nFt)roku_96.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=11">Brunette<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=qN8356TbeqM48zjadOf)(mh=3mdACFYAqGaIW7bN)roku_11.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=14">Bukkake<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=qJ9356TbeqM48zjadOf)(mh=SO476XYjECkKYHY4)roku_14.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=86">Cartoon<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=qP_356TbeqM48zjadOf)(mh=6MEf_XdyKLkUvnb9)roku_86.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=90">Casting<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=q1N556TbeqM48zjadOf)(mh=8Lokk6AzEHL63a6g)roku_90.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=12">Celebrity<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=q8O556TbeqM48zjadOf)(mh=ucq0-F5Ju-psOPCL)roku_12.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=732">Closed Captions<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=q5P556TbeqM48zjadOf)(mh=HiE2KhvWAnBRt3JV)roku_732.jpg"></a>',
+'<a href="https://www.pornhub.com/categories/college">College (18+)<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=q-Q556TbeqM48zjadOf)(mh=D1U01z9dfVanT59L)roku_79.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=57">Compilation<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=qXT556TbeqM48zjadOf)(mh=J2mE3gqpxfU8EM_8)roku_57.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=241">Cosplay<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=q-T556TbeqM48zjadOf)(mh=fpXUlT6Npn8eJqMX)roku_241.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=15">Creampie<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=q4U556TbeqM48zjadOf)(mh=4pShJA83wP5u40TB)roku_15.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=242">Cuckold<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=qNV556TbeqM48zjadOf)(mh=IxiQiqxAKTXIuIou)roku_242.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=16">Cumshot<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=q4V556TbeqM48zjadOf)(mh=G4XubEH2fwHslMYi)roku_16.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=100">Czech<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=q_W556TbeqM48zjadOf)(mh=demFj5SMXkCx6hhl)roku_100.jpg"></a>',
+'<a href="https://www.pornhub.com/described-video">Described Video<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=qVX556TbeqM48zjadOf)(mh=00PXdhvRIiUcJtr7)roku_231.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=72">Double Penetration<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=qQY556TbeqM48zjadOf)(mh=TIa7kFq0SN5Y3KXg)roku_72.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=55">Euro<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=q3Z556TbeqM48zjadOf)(mh=ZXjCWvcqZ24EYTAB)roku_55.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=115">Exclusive<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=qK1556TbeqM48zjadOf)(mh=ARdRKSk558_3P5-9)roku_115.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=93">Feet<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=q41556TbeqM48zjadOf)(mh=y4vgSD1tgRefBHmt)roku_93.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=502">Female Orgasm<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=q22556TbeqM48zjadOf)(mh=Wl-l_1Lj-N24fysJ)roku_502.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=18">Fetish<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=qP3556TbeqM48zjadOf)(mh=m-f08BLihObPFFmx)roku_18.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=592">Fingering<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=q8ZG4HUbeqM48zjadOf)(mh=ntfHKJ5I62HvwZ6g)roku_592.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=19">Fisting<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=q43556TbeqM48zjadOf)(mh=xus008URuuxMq5p6)roku_19.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=94">French<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=qH8556TbeqM48zjadOf)(mh=TbRZqnqRkUgmOK3n)roku_94.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=32">Funny<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=qY8556TbeqM48zjadOf)(mh=tt4sqBPNmsxu_DhN)roku_32.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=80">Gangbang<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=q19556TbeqM48zjadOf)(mh=mqD_lbkRtURTY-Mg)roku_80.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=95">German<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=qN_556TbeqM48zjadOf)(mh=eaj6PnAm5hkXJtFC)roku_95.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=20">Handjob<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=q6_556TbeqM48zjadOf)(mh=RDVugYqrABDhSnbA)roku_20.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=21">Hardcore<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=qS-556TbeqM48zjadOf)(mh=8-qomozPchwydRh-)roku_21.jpg"></a>',
+'<a href="https://www.pornhub.com/hd">HD Porn<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=qUV556TbeqM48zjadOf)(mh=pAMyFmDUs8zZdnof)roku_38.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=101">Indian<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=qOW556TbeqM48zjadOf)(mh=X9NmtOo05qEEJWyn)roku_101.jpg"></a>',
+'<a href="https://www.pornhub.com/interactive">Interactive<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=qTX556TbeqM48zjadOf)(mh=IRVfkwpN4oIFxw4w)roku_108.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=25">Interracial<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=q6X556TbeqM48zjadOf)(mh=MRQIBcQ2CRWLNOXm)roku_25.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=97">Italian<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=qNY556TbeqM48zjadOf)(mh=lOLvM5LtOB4bQ-eS)roku_97.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=103">Korean<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=qJZ556TbeqM48zjadOf)(mh=jGQDEDPsIQ6D3f9y)roku_103.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=26">Latina<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=qZZ556TbeqM48zjadOf)(mh=c4ClKs3GY7xxERrS)roku_26.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=78">Massage<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=qL1556TbeqM48zjadOf)(mh=CQWwgpZbm1f4D7Yw)roku_78.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=22">Masturbation<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=qY1556TbeqM48zjadOf)(mh=CxJi_c-fr_NlbLDL)roku_22.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=121">Music<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=qS3556TbeqM48zjadOf)(mh=Dvl-YLRFCMClzdat)roku_121.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=2">Orgy<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=qT4556TbeqM48zjadOf)(mh=p61vyEvge2aE46Ar)roku_2.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=201">Parody<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=qM5556TbeqM48zjadOf)(mh=0fvIH3jZzhcgV5c_)roku_201.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=53">Party<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=q25556TbeqM48zjadOf)(mh=OdGFm83xcyrmEEbz)roku_53.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=211">Pissing<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=qLJ656TbeqM48zjadOf)(mh=0htJ8BLS0H5RzNUN)roku_211.jpg"></a>',
+'<a href="https://www.pornhub.com/popularwithwomen">Popular With Women<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=q9NJ36TbeqM48zjadOf)(mh=fbJW4u18fk_E6ayC)roku_73.jpg"></a>',
+'<a href="https://www.pornhub.com/categories/pornstar">Pornstar<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=q3J656TbeqM48zjadOf)(mh=_m-R9EUYS8keBeCY)roku_30.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=41">POV<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=qXK656TbeqM48zjadOf)(mh=h-8PWgjYLgpL7lUg)roku_41.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=24">Public<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=q9K656TbeqM48zjadOf)(mh=wKvtJwW8THiE3k11)roku_24.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=131">Pussy Licking<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=qPL656TbeqM48zjadOf)(mh=TgyC8EpMjuzxz3RW)roku_131.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=31">Reality<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=q1L656TbeqM48zjadOf)(mh=dX_obvXpMLj67EQQ)roku_31.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=42">Red Head<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=qHM656TbeqM48zjadOf)(mh=D5T-3TIIwwV62Xlq)roku_42.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=81">Role Play<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=qWM656TbeqM48zjadOf)(mh=l7c3YULFQAGOqIDM)roku_81.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=522">Romantic<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=qGN656TbeqM48zjadOf)(mh=_P1dyr3ZSNAgnIAn)roku_522.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=67">Rough Sex<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=q3N656TbeqM48zjadOf)(mh=Ijudvzo_6tnv2G2L)roku_67.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=99">Russian<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=qMO656TbeqM48zjadOf)(mh=H7oIXZmlSOv0Ojx6)roku_99.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=88">School (18+)<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=q_O656TbeqM48zjadOf)(mh=s43M-JipkUKTsfml)roku_88.jpg"></a>',
+'<a href="https://www.pornhub.com/sfw">SFW<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=qQXH4HUbeqM48zjadOf)(mh=h8tlHuI2bHph_1kH)roku_221.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=59">Small Tits<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=qQQ656TbeqM48zjadOf)(mh=iAhs3xprXou1TLpk)roku_59.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=91">Smoking<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=q3Q656TbeqM48zjadOf)(mh=w0RjuWrq7XbZKYl8)roku_91.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=492">Solo Female<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=qIR656TbeqM48zjadOf)(mh=0RinEDklbqrIql1g)roku_492.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=92">Solo Male<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=qUT656TbeqM48zjadOf)(mh=nqgBp_OeC-AS54My)roku_92.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=69">Squirt<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=q0U656TbeqM48zjadOf)(mh=5ccD0OUJfd4JtlGm)roku_69.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=444">Step Fantasy<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=qRV656TbeqM48zjadOf)(mh=cQo9PHIrE2jmh8CR)roku_444.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=542">Strap On<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=q43G4HUbeqM48zjadOf)(mh=EbAkhMpQf4OlQYzL)roku_542.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=33">Striptease<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=q6V656TbeqM48zjadOf)(mh=HaXXCGIRSD-mejwN)roku_33.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=562">Tattooed Women<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=q01656TbeqM48zjadOf)(mh=J2GLNfmj8Hy16Tyd)roku_562.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=23">Toys<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=q82656TbeqM48zjadOf)(mh=fwIV2RteGTBsWFYx)roku_23.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=138">Verified Amateurs<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=qNWTN7TbeqM48zjadOf)(mh=-3RAM6tSRx1XIRPh)roku_138.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=482">Verified Couples<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=q3MVN7TbeqM48zjadOf)(mh=_suXw0ogHqzr_rln)roku_482.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=139">Verified Models<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=q1HVN7TbeqM48zjadOf)(mh=eNyXZNN9dIs6JmEw)roku_139.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=43">Vintage<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=qN4656TbeqM48zjadOf)(mh=sHFMLGK1mKDS35nI)roku_43.jpg"></a>',
+'<a href="https://www.pornhub.com/video?c=61">Webcam<br><img src="https://ei.phncdn.com/is-static/images/categories/(m=q34656TbeqM48zjadOf)(mh=I_BlSK8aYFIlBYcU)roku_61.jpg"></a>',
+'<a href="https://www.pornhub.com/video/incategories/big-tits/lesbian">Big Tits239,094</a>\n<a href="https://www.pornhub.com/video/incategories/lesbian/popular-with-women">Popular With Women11,095</a>\n<a href="https://www.pornhub.com/video?c=532">Scissoring 4,676 </a>\n<a href="https://www.pornhub.com/video/incategories/amateur/lesbian">Amateur405,213</a> \n<a href="https://www.pornhub.com/video/incategories/teen-18-1/threesome">Teen (18+)262,164</a>\n<a href="https://www.pornhub.com/video/incategories/milf/threesome">MILF155,528</a>\n<a href="https://www.pornhub.com/video/incategories/big-tits/vr">Big Tits239,094</a>\n<a href="https://www.pornhub.com/video/incategories/transgender/vr">Transgender33,829</a>\n<a href="https://www.pornhub.com/video/incategories/60fps-1/vr">60FPS120,660</a>\n',
+
+];
+
+bookid = "pornhubCategories"
+initSelectRange = 3000
+showSrcSwitch = true
+noShuffle = true;
+showHelpTxt = `+ addToIgnoreLst\n- removeFmIgnoreLst\n2 setRange\nA toggle_automode\nb backClick\nc callCalculator\ne scrollTo Bottom\nf forward\nH showHelp\nI setInterval\nr randomNum\nR removeNumFmIgnoreLst\ns setRange\nS toggle_showSrcSwitch\nT alertTotal\nt scrollTo Top\nv viewIgnoreLst\nx showAnswer\nz showTenYear`
+
+</script>
+
+<script src='https://williamkpchan.github.io/showTips.js'></script>
+<!--script src='../showTips.js'></script-->
+
+
+</body>
+</html>

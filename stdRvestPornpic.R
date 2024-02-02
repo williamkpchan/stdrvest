@@ -18,7 +18,7 @@ pageHeader="https://www.pornpics.com/galleries/"
 pageTail=""
 className = ".thumbwook a" # pornpic
 
-titleName = "DeeWilliams"
+titleName = readline(prompt="enter file name: ")
 theFilename = paste0("pornpics", titleName, ".html")
 wholePage = character()
 
