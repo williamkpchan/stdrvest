@@ -8,11 +8,14 @@ Sys.setlocale(category = 'LC_ALL', 'Chinese')
 #options("encoding" = "UTF-8")
 setwd("C:/Users/User/Pictures/sexpage")
 
-library(audio)
 library(rvest)
+library(crayon)
 
 serverName = "https://www.pinkfineart.com/"
-titleName = "bikini-riot"
+titleName = readline("enter titleName: ")
+titleName = gsub(" ", "-", titleName)
+
+lastPageNum = as.numeric(readline("enter lastPageNum: "))
 
 #pageHeader="https://www.pinkfineart.com/als-angels/page/"
 linkPageHeader = paste0(serverName, titleName, "/page/")
@@ -27,7 +30,7 @@ linkClassName = ".card-link" # pinkfineart links
 imgClassName = ".card a" # pinkfineart
 
 # remember to remove &#9;
-linkAddr = 1:6
+linkAddr = 1:lastPageNum
 imgAddr = character()
 
 lentocpage = length(linkAddr)
@@ -68,6 +71,7 @@ for(i in 1:length(linkAddr)){
  itemList = html_attr(itemList, 'href')
  itemList = as.character(itemList)
  allLinks = c(allLinks, itemList)
+ cat(green("length(itemList): ", length(itemList)), yellow(" length(allLinks): ", length(allLinks), "\n"))
 }
 
 ProcessEndTime = Sys.time()
@@ -77,6 +81,8 @@ cat("Link Task completed! loop time: ",LoopTime," secs\n\n")
 
 allLinks = sort(allLinks)
 allLinks = unique(allLinks)
+cat(red("unique(allLinks): ", length(allLinks)), "\n")
+
 modServerName = substring(serverName, 1, nchar(serverName)-1)
 
 for(i in 1:length(allLinks)){
@@ -90,17 +96,23 @@ for(i in 1:length(allLinks)){
  itemList = html_attr(itemList, 'href')
  itemList = as.character(itemList)
  wholePage = c(wholePage, itemList)
+ cat(brown("length(itemList): ", length(itemList)), orange(" length(wholePage): ", length(wholePage), "\n"))
 }
 wholePage = paste0(modServerName, wholePage)
-wholePage = gsub('https', '<br><img class="lazy" data-src="https', wholePage)
-wholePage = gsub('jpg', 'jpg">', wholePage)
+rplLine = paste0("^.*?", titleName, "/")
+wholePage = gsub(rplLine, "'", wholePage)
+wholePage = gsub('\\.jpg.*', "',", wholePage)
 
 #writeClipboard(wholePage)
 
-templateHead = readLines("templateHead.txt")
-templateTail = readLines("templateTail.txt")
-templateHead = gsub("mom50", titleName, templateHead)
+templateHead = readLines("templateHeadArray.txt")
+templateTail = readLines("templateTailArray.txt")
+templateHead = gsub("penny-barber", titleName, templateHead)
+templateTail = gsub("penny-barber", titleName, templateTail)
+headLine = paste0("https://www.pinkfineart.com/galleries/", titleName, "/")
+templateTail = gsub("https://cdni.pornpics.com/1280/", headLine, templateTail)
 
+theFilename = paste0("./pinkfineart/", theFilename)
 sink(theFilename)
 cat(templateHead, sep="\n")
 cat(wholePage, sep="\n")

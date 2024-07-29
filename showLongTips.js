@@ -1,4 +1,8 @@
 ignoreLstName = bookid + "IgnoreLst"
+container = document.querySelector('.js-tip');
+aCount = 0
+tipPointer = 0
+
 if (typeof showSrcSwitch == 'undefined') {
     showSrcSwitch = false;  // showSrcSwitch to control display dom content
 }
@@ -17,7 +21,8 @@ if (ignoreLst === null) {
 
 automodeSwitch = false
 tipLimit = tipsList.length; // Tip Limit counter
-timeInterval = 10000
+timeInterval = 3000
+tipPointer = 0
 
 allIdx = Array.from(Array(tipLimit).keys())
 rm_ignoreLst()
@@ -26,7 +31,7 @@ rm_ignoreLst()
 function unaryOp(value) { return +value; }
 
 if (typeof initSelectRange == 'undefined') {
-  initSelectRange = 50;
+  initSelectRange = 80;
 }
 
 if(tipLimit > initSelectRange){
@@ -35,6 +40,8 @@ if(tipLimit > initSelectRange){
   selectRange = tipLimit
 }
 init_theRange(selectRange)
+
+
 
 function init_theRange(newRange) {
   old_selectRange = selectRange
@@ -65,8 +72,14 @@ function init_theRange(newRange) {
 }
 
 function generateMsg() {
+  if(showRange > tipsList.length){
+    topicpointer = 0
+  }
   if(topicpointer>tipsListIdx.length){
      topicpointer = Math.floor(Math.random() * (tipsListIdx.length -1))
+  }
+  if(topicpointer>(tipsListIdx.length-showRange)){
+     topicpointer = tipsListIdx.length-showRange
   }
   document.querySelector('.tip-number').innerText = document.title+" "+topicpointer
 
@@ -79,10 +92,17 @@ function generateMsg() {
   for(loop = startIdx; loop < endIdx; loop++){
     tip = tipsList[tipsListIdx[loop]];
     tip = assembleLIne(tip)
-      tipContent = tipContent + tip + "<br>";
+      tipContent = tipContent + tip;
     topicpointer = topicpointer + 1
   }
   document.querySelector('.js-tip').innerHTML = tipContent;
+
+    // container count
+      container = document.querySelector('.js-tip');
+      aCount = container.querySelectorAll('a').length;
+      if(aCount==0){
+        aCount = container.querySelectorAll('img').length;
+      }
 
   $("#dateAndTime").click()
   document.querySelector('.tip-button').innerHTML = tipsListIdx[topicpointer] + " of " + tipsList.length
@@ -121,6 +141,8 @@ function forward() {
     }
     topicpointer = topicpointer + 1;
     generateMsg();
+
+    window.location = '.js-tip';
 }
 
 function backClick() {
@@ -141,14 +163,14 @@ function chkKey() {
   else if(testkey == 'c'){clickImg();}
   else if(testkey == 'd'){window.open("https://www.youdao.com/");}
   else if(testkey == 'E'){window.open("https://williamkpchan.github.io/LibDocs/English Conversation.html");}
-  else if(testkey == 'f'){forward();}
-  else if(testkey == 'F'){window.open("http://fanyi.baidu.com/");}
+  else if(testkey == 'F'){forward();}
+  else if(testkey == 'f'){forwardInTip();}
   else if(testkey == 'g'){gotoNum()}
   else if(testkey == 'l'){listAll()}
 
   else if(testkey == '+'){addToIgnoreLst();}
   else if(testkey == '-'){removeFmIgnoreLst();}
-  else if(testkey == 'R'){removeNumFmIgnoreLst();}
+//  else if(testkey == 'R'){removeNumFmIgnoreLst();}
   else if(testkey == 's'){setRange();}
   else if(testkey == 'S'){toggle_showSrcSwitch();}
   else if(testkey == '2'){setRange();}
@@ -205,7 +227,8 @@ function chkOtherKeys(testkey) {
 
   else if(testkey == 'i'){window.open("https://williamkpchan.github.io/LibDocs/InspectChart.html");}
 
-  else if(testkey == 'r'){randomNum();}
+  else if(testkey == 'R'){randomNum();}
+  else if(testkey == 'r'){randomInTip();}
   //else if(testkey == 'R'){window.open("https://williamkpchan.github.io/LibDocs/postProcessReport.html");}
 
   else if(testkey == 'W'){window.open("https://web.whatsapp.com/");}
@@ -230,8 +253,27 @@ function randomNum() {
  console.log("topicpointerbf: ", topicpointer)
  topicpointer = Math.floor(Math.random() * (tipsList.length -1))
  console.log("topicpointeraf: ", topicpointer)
+ tipPointer = 0
+ console.log("tipPointer: ", tipPointer)
  generateMsg();
 } 
+
+function randomInTip() {
+  tipPointer = Math.floor(Math.random() * (aCount -1))
+  const nthChild = container.childNodes[tipPointer];
+  nthChild.scrollIntoView({ behavior: 'instant' });
+  console.log(tipPointer);
+} 
+
+function forwardInTip() {
+  tipPointer = tipPointer + 1
+  if(tipPointer>=aCount){
+    tipPointer = 0
+  }
+  console.log(tipPointer);
+  const nthChild = container.childNodes[tipPointer];
+  nthChild.scrollIntoView({ behavior: 'instant' });
+}
 
 function shuffle(arrayLst) {
  var i = arrayLst.length, j = 0, temp;
@@ -327,8 +369,10 @@ function toggle_automode() {
   if(automodeSwitch == false){
     autoInterval = setInterval(function(){ forward(); }, timeInterval);
     $(".tip-button").before("<p>automode!"+ timeInterval/1000 +"s</p>");
+    automodeSwitch = true
   }else{
     clearInterval(autoInterval);
+    automodeSwitch = false
   }
 }
 

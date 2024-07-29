@@ -1,0 +1,73 @@
+<base target="_blank"><html><head><title>bad-bella: 13</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="https://williamkpchan.github.io/maincss.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.js"></script>
+<script src="https://williamkpchanhp.github.io/LibDocs/literature/proverbs.js"></script>
+<script src='../mainscript.js'></script>
+
+</head>
+<style>
+body { background-color: black; font-family: 'Patrick Hand', sans-serif; font-size: 24px; color: gray; justify-content: center; align-content: center; width: 80%; margin-left: 10%;}
+
+.tip { width: 100%;}
+.code { background-color: #000500; border-radius: 8px; border: 1px solid DarkSlateGray; padding: 5px; }
+.tip-number { margin: auto; color: #20A020; text-transform: uppercase; letter-spacing: 0.1rem; font-weight: bolder; font-size: 26px;}
+.js-tip, .cssTip, .cssExplain { margin: auto; padding: 2px 2px; font-size: 24px; line-height: 1.5;}
+.tip-button { background-color: #003020; outline: none; padding: 10px 10px; display: inline-block; margin: auto; font-size: 1rem; margin-top: 2.5rem; cursor: pointer; font-weight: bolder; border: none; border-radius: 8px; color: #10C030;}
+.disabled { background-color: #D8D8D8 !important; color: #888; cursor: not-allowed !important;}
+a { text-decoration: none; color: #487878;}
+a:visited { color: #784838;}
+A:hover {	color: yellow;}
+A:focus {	color: red;}
+code { color: #488838;; background-color: #001010; font-size: 18px;}
+pre { color: gray; background-color: #000500; font-size: 24px; width:80%; white-space: pre-wrap; background-image:inherit;}
+pre img {width: 100%;}
+video {width: 60%;}
+</style>
+
+<body onkeypress="chkKey()">
+<br>
+<span id="dateAndTime" onclick="showDateAndTime()"><script>showDateAndTime();</script></span>
+<div class="tip-number" onclick="forward()" ondblclick="randomNum()">bad-bella: 13</div>
+<pre class="js-tip"></pre>
+<button class="tip-button" onclick="forward()">Tips Left: <span class="tip-limit-count"></span></button>
+<br>
+
+<br>
+<script>
+// List of JavaScript tips
+var tipsList = [
+'<a href="https://xhamster.com/videos/bad-bella-vs-jason-michaels-jason-wants-to-stuff-this-hot-blonde-big-tit-babe-xhwciez"><img src="https://ic-vt-ah.xhcdn.com/a/NTQxYzE4NmQ4OGZjZmFmNWQzNWQ3ODEwZDY2ZjJmYjE/s(w:320,h:180),jpeg/024/273/473/v2/320x180.222.jpg"><br>Bad Bella vs Jason Michaels - Jason Wants To Stuff This Hot Blonde Big Tit Babe</a><br><video controls loop autoplay><source src="https://thumb-v3.xhcdn.com/a/vHSfnM4-6ja1cbBrM8-hww/024/273/473/526x298.78.t.mp4"></video><br><img src="https://thumb-v3.xhcdn.com/a/rK3o1Q7XD87Ost-8_pNImw/024/273/473/240x135.s',
+'<a href="https://xhamster.com/videos/clubtug-big-boob-porn-newcomer-bad-bella-handjob-xhJ01qA"><img src="https://ic-vt-ah.xhcdn.com/a/MGY1NGE3YTNhMmMyMWY2OGI0MTk0OTJjYzI5YTdhYjQ/s(w:526,h:298),jpeg/023/842/164/1280x720.c.jpg.v1696266855"><br>CLUBTUG Big Boob Porn Newcomer Bad Bella Handjob</a><br><video controls loop autoplay><source src="https://thumb-v4.xhcdn.com/a/Y6CAG-qLmeixn_z7XC96Fw/023/842/164/240x135.44.t.mp4"></video><br><img src="https://thumb-v4.xhcdn.com/a/5I3Llv5viFXN6sGXnvwIew/023/842/164/240x135.s',
+'<a href="https://xhamster.com/videos/bad-bella-is-a-hot-fuck-doll-xh3xNGu"><img src="https://ic-vt-ah.xhcdn.com/a/YTc4NzBiNGVkMjEyMTZiOWFmNjhlMmNkZGYwNzY1ZGU/s(w:320,h:180),jpeg/024/081/885/v2/320x180.220.jpg"><br>Bad Bella is a Hot Fuck Doll</a><br><video controls loop autoplay><source src="https://thumb-v5.xhcdn.com/a/whOBMp0E62gn_dXFiF0wkA/024/081/885/526x298.78.t.mp4"></video><br><img src="https://thumb-v5.xhcdn.com/a/jjzOaZLU7qJ5pqDQECMOfw/024/081/885/240x135.s',
+'<a href="https://xhamster.com/videos/nookies-bad-bella-huge-tits-and-a-creampie-xhcwWr2"><img src="https://ic-vt-ah.xhcdn.com/a/MGNhZDczMmQyMTM0OTY1OGM3Yjg1MjgwMDQ3M2RiMjI/s(w:526,h:298),jpeg/024/043/296/1280x720.c.jpg.v1701054243"><br>NOOKIES Bad Bella Huge Tits and a Creampie</a><br><video controls loop autoplay><source src="https://thumb-v6.xhcdn.com/a/Qi8-asGSU076A3eDjzY4mw/024/043/296/240x135.44.t.mp4"></video><br><img src="https://thumb-v6.xhcdn.com/a/d9avMEXu8Zh-VKMM89j_WA/024/043/296/240x135.s',
+'<a href="https://xhamster.com/videos/big-tits-bad-bella-helps-her-husband-with-black-cock-cuckold-xhBh1Hq"><img src="https://ic-vt-ah.xhcdn.com/a/ZThiMTZmZWJlODI0MzllNTU2MjIxMTkzZDM3NWFkZmY/s(w:320,h:180),jpeg/023/844/109/v2/320x180.207.jpg"><br>Big Tits Bad Bella Helps Her Husband With Black Cock Cuckold</a><br><video controls loop autoplay><source src="https://thumb-v9.xhcdn.com/a/ON35p8tTETnim6y4RBs0zg/023/844/109/240x135.44.t.mp4"></video><br><img src="https://thumb-v9.xhcdn.com/a/hXeWQnBkyF81GKlfRNhkeg/023/844/109/240x135.s',
+'<a href="https://xhamster.com/videos/bad-bella-badder-badder-xhCCcwn"><img src="https://ic-vt-ah.xhcdn.com/a/ZTc2ZDM4NjJmZGFiMTAxZjViOTYwZWE4YjVkMzAzNmE/s(w:320,h:180),jpeg/023/911/255/v2/320x180.230.jpg"><br>Bad Bella: Badder & Badder</a><br><video controls loop autoplay><source src="https://thumb-v5.xhcdn.com/a/4AsV_YbJZ0f-4YX0fS2uJw/023/911/255/240x135.44.t.mp4"></video><br><img src="https://thumb-v5.xhcdn.com/a/tpt0mU1EE_pnsGJ-w2gWVA/023/911/255/240x135.s',
+'<a href="https://xhamster.com/videos/big-tits-blonde-bad-bella-knows-some-naked-yoga-xhPSGg0"><img src="https://ic-vt-ah.xhcdn.com/a/Y2FkNTdjNTk1NDg4YWM1ZGE2OTI4ZGZlNWVmNGM0NmQ/s(w:320,h:180),jpeg/023/933/971/v2/320x180.211.jpg"><br>Big Tits Blonde Bad Bella Knows Some Naked Yoga</a><br><video controls loop autoplay><source src="https://thumb-v1.xhcdn.com/a/ZehSPqPsJ7NraxOSQRkq8Q/023/933/971/240x135.44.t.mp4"></video><br><img src="https://thumb-v1.xhcdn.com/a/cOft3o0z1Lk7dlZZzOz6PQ/023/933/971/240x135.s',
+'<a href="https://xhamster.com/videos/finishhim-big-boob-blonde-bad-bella-handjob-is-best-handjob-xhkx4kA"><img src="https://ic-vt-ah.xhcdn.com/a/NzM3YTc0ZmQ5ZDFhNjM2NzhiMGEzMWZlNDAwM2E2N2U/s(w:320,h:180),jpeg/023/793/277/v2/320x180.218.jpg"><br>FINISHHIM Big Boob Blonde Bad Bella Handjob is Best Handjob</a><br><video controls loop autoplay><source src="https://thumb-v7.xhcdn.com/a/4jdxpYiadnZ21Mbv5AhitA/023/793/277/240x135.44.t.mp4"></video><br><img src="https://thumb-v7.xhcdn.com/a/gJWqhG1agwXZa_aqmMYq7g/023/793/277/240x135.s',
+'<a href="https://xhamster.com/videos/big-tits-milf-bad-bella-stretched-by-big-dick-pov-xhaukPE"><img src="https://ic-vt-ah.xhcdn.com/a/MWU1NzM3OGFjZjk5YTE2YmI5NWZmNDMwMjAwNGM2NmM/s(w:320,h:180),jpeg/023/844/162/v2/320x180.229.jpg"><br>Big TIts MILF Bad Bella Stretched By Big Dick POV</a><br><video controls loop autoplay><source src="https://thumb-v2.xhcdn.com/a/xtWFfeNYUuKWZDu_hnHznQ/023/844/162/240x135.44.t.mp4"></video><br><img src="https://thumb-v2.xhcdn.com/a/bK-idsBF4DOoJURDJ7SXTA/023/844/162/240x135.s',
+'<a href="https://xhamster.com/videos/a-good-girl-called-bad-bella-xhLpN1J"><img src="https://ic-vt-ah.xhcdn.com/a/YWM4NWMyY2U1ZmQ2NGExNTFkOTliNzViZTM3OTM3MGM/s(w:320,h:180),jpeg/024/081/904/v2/320x180.234.jpg"><br>A Good Girl Called Bad Bella</a><br><video controls loop autoplay><source src="https://thumb-v4.xhcdn.com/a/5FUZBjgPLIY3VIFOT1xLYQ/024/081/904/526x298.78.t.mp4"></video><br><img src="https://thumb-v4.xhcdn.com/a/YAIlpp6vJ92uaE6RAYU4AQ/024/081/904/240x135.s',
+'<a href="https://xhamster.com/videos/mylked-big-boob-bad-bella-experiences-a-milking-table-xhkGdMP"><img src="https://ic-vt-ah.xhcdn.com/a/NjI4Nzg2YjRlOTUwOTVlMjkzMjIyNDQ0N2E3M2U5ZTY/s(w:526,h:298),jpeg/023/889/037/1280x720.c.jpg.v1697310016"><br>MYLKED Big Boob Bad Bella Experiences a Milking Table</a><br><video controls loop autoplay><source src="https://thumb-v7.xhcdn.com/a/LPWr8-QaQXAQvV2k4TPF6w/023/889/037/240x135.44.t.mp4"></video><br><img src="https://thumb-v7.xhcdn.com/a/rRK5wuQeIoq9gzt2zTm6bQ/023/889/037/240x135.s',
+'<a href="https://xhamster.com/videos/bad-bella-cums-good-xhE1Dvh"><img src="https://ic-vt-ah.xhcdn.com/a/MTIwYTY2OTdiYmQ0NzZjZGYwMjA2YTdlZTAzYmJhYjE/s(w:320,h:180),jpeg/024/081/871/v2/320x180.225.jpg"><br>Bad Bella Cums Good</a><br><video controls loop autoplay><source src="https://thumb-v1.xhcdn.com/a/9VTVB-knsuYq6oGQZy-kFQ/024/081/871/526x298.78.t.mp4"></video><br><img src="https://thumb-v1.xhcdn.com/a/3q8i-jvn4zzccaKJ9WzK8Q/024/081/871/240x135.s',
+'<a href="https://xhamster.com/videos/a-good-girl-called-bad-bella-xhhrwet"><img src="https://ic-vt-ah.xhcdn.com/a/NjM5MDU4NjFlNmU1YTYyNDhjZDc0ZWFlOTEzZGUyMGE/s(w:320,h:180),jpeg/023/911/243/v2/320x180.234.jpg"><br>A Good Girl Called Bad Bella</a><br><video controls loop autoplay><source src="https://thumb-v3.xhcdn.com/a/C0bCzyt4YqrteD10d135IQ/023/911/243/240x135.44.t.mp4"></video><br><img src="https://thumb-v3.xhcdn.com/a/j_cET-dTrhy6rVD6U1b18g/023/911/243/240x135.s',
+
+
+];
+lineHeader = '<div>'
+lineTail = '.jpg"></div>'
+bookid = "bad-bella: 13"
+showRange = 40
+initSelectRange = 30000
+showSrcSwitch = true
+noShuffle = true;
+showHelpTxt = `+ addToIgnoreLst\n- removeFmIgnoreLst\n2 setRange\nA toggle_automode\nb backClick\nc callCalculator\ne scrollTo Bottom\nf forward\nH showHelp\nI setInterval\nr randomNum\nR removeNumFmIgnoreLst\ns setRange\nS toggle_showSrcSwitch\nT alertTotal\nt scrollTo Top\nv viewIgnoreLst\nx showAnswer\nz showTenYear`
+</script>
+
+<script src='https://williamkpchan.github.io/showTips.js'></script>
+<script src='showLongTips.js'></script>
+
+
+</body>
+</html>
+

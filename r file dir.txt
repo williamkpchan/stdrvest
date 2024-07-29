@@ -1,0 +1,47 @@
+22 Aug 19  03:45    26,342 stdRvestMom50.R
+22 Aug 19  09:31    74,795 stdRvest BU.R
+22 Aug 30  08:15    53,340 stdRvestDemo2.R
+22 Aug 30  12:09     8,775 stdRvestDemo2Samples.R
+22 Sep 02  11:12     3,352 stdRvestPinkfineart.R
+22 Sep 26  12:30     1,715 rvestTouchmylips.R
+22 Sep 28  01:20     3,204 stdRvestXhamsterChannels.R
+22 Sep 30  11:17     2,970 stdRvestPornhubPlaylists.R
+22 Oct 11  03:12    50,881 stdRvest.R
+22 Oct 17  04:07     4,497 stdRvestPhoto.R
+22 Nov 07  02:05     4,484 stdRvestPornhubChannels.R
+22 Nov 07  07:17     4,780 stdRvestPornhubPornstars.R
+22 Nov 07  11:14     4,347 stdRvestFreematuresgallery.R
+22 Nov 12  09:44     3,286 stdRvestXvideos.Pornstars.R
+22 Nov 13  07:18     3,249 stdRvestXhamsterPornstar.R
+22 Dec 21  03:27     3,279 stdRvestXhamsterVideos.R
+22 Dec 21  04:54     1,144 chopBigfile.R
+23 Apr 25  11:22     1,077 checkFileExist.R
+23 Feb 19  06:36     3,067 stdRvestXhamsterPornstarVideos.R
+23 Feb 20  09:24     3,047 stdRvestXhamsterUsersVideos.R
+23 May 25  09:32     3,902 stdExtXvideo.R
+23 Jun 07  04:03     3,205 stdRvestXhamsterAllStarVideos.R
+23 Jun 10  11:52     3,546 stdRvestXvideo.R
+23 Jul 15  06:56     1,517 filterNremove repeated links.R
+23 Jul 17  06:23     3,394 stdRvestXhamsterAllCreators.R
+23 Jul 22  09:05     3,192 stdRvestYoux.R
+23 Jul 22  10:34     2,728 stdRvestYouxPicsReadFIle.R
+23 Dec 27  12:29     3,445 stdRvestsexhd.pics.R
+23 Dec 28  08:04     1,605 stdRvestsexhd.picsBig.R
+24 Jan 03  09:20     2,753 stdRvestXhamsterRelatedVideos.R
+24 Jan 04  07:19       774 stdPostProcessHTMLFiles.R
+24 Jan 05  03:22     2,122 stdRvestBatchPHubStars.R
+24 Jan 05  11:25     5,802 stdRvestBatchXhamsterVideos.R
+24 Jan 24  03:20     4,776 stdRvestBatchPHubVideos.R
+24 Jan 26  11:25     3,441 stdRvestPhotoLinks.R
+24 Feb 07  11:51     3,063 stdRvestPornpicStars.R
+24 Feb 10  05:02       784 chopBigfileAgain.R
+24 Feb 10  10:44     3,087 stdRvestPornpicChannets.R
+24 Feb 11  03:51     6,193 stdRvestXhamsterChannelsVideos.R
+24 Feb 12  03:22     1,119 collectPornpicXhr.r
+24 Feb 14  08:25     4,234 stdRvestPornpic.R
+24 Feb 15  02:35     3,020 stdRvestPornhubChannelsNew.R
+24 Feb 15  10:34     8,947 PinkMilfcollectPhotos.R
+24 Feb 16  10:33     4,240 stdRvestPornpicNew.R
+24 Feb 16  11:56     4,159 stdRvestPornhubVIdeo.R
+24 Feb 18  12:03     4,716 BATCH Process PHub.R
+24 Feb 18  12:05     7,218 stdRvestPornpicBatch.R
