@@ -1,0 +1,11 @@
+
+<script>
+var lazyLoadInstance = new LazyLoad({
+    elements_selector: ".lazy"
+});
+</script>
+
+
+</body>
+</html>
+
