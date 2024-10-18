@@ -66,3 +66,6 @@ C:\Users\User\Pictures\sexpage\archivegalleries\	archivegalleriesImgs.R
  	 
 D:\Dropbox\MyDocs\R misc Jobs\webscraping\Text\programs\pohub\scripts\R\	OldProgramsMenu.R
 C:\Users\User\Pictures\sexpage\	findFiles.R
+D:\Dropbox\MyDocs\R misc Jobs\	removeduplicates.R
+D:\Dropbox\MyDocs\R misc Jobs\	repairDuplicatedItems.R
+D:\Dropbox\MyDocs\R misc Jobs\	pohub.Batch.R
